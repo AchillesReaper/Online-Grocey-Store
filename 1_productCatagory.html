@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img.productCat {
+                width: 500;
+                position: absolute;
+                top: 185px;
+                visibility: hidden;
+                z-index: 3;
+            }
+            img.layer3pdt {
+                width: 500;
+                position: absolute;
+                top: 352px;
+                visibility: hidden;
+                z-index: 1;
+            }
+            #layer1 {
+                z-index: 5;
+            }
+            #resTest{
+                position:absolute;
+                top: 600px;
+            }
+        </style>
+        <script src ="functions.js"></script>
+    </head>
+    <body>
+        
+        <img width="499" height="181" id="layer1" src="Images/category3layer/0_Categories.png" usemap="#categoryMap"/>
+        <map name="categoryMap">
+            <area onmouseover="showCat(0)" shape="rect" coords="7,77,88,181" id="cFrozenFood"/>
+            <area onmouseover="showCat(1)" shape="rect" coords="292,77,374,181" id="cHomeHealth"/>
+            <area onmouseover="showCat(2)" shape="rect" coords="100,77,183,181" id="cFreshFood"/>
+            <area onmouseover="showCat(3)" shape="rect" coords="196,77,278,181" id="cBeverages"/>
+            <area onmouseover="showCat(4)" shape="rect" coords="380,77,469,181" id="cPetFood"/>
+        </map><br>
+
+        <img class="productCat" id="FzFood" src="Images/category3layer/1_L2_FZFd.png" usemap="#map1"/>
+        <map name="map1">
+            <area onmouseover="showLayer3(1)" shape="rect" coords="101, 132, 183, 173" id="L3FishF"/>
+            <area onmouseover="showLayer3(0)" id="1002" onclick="databaseAccess(this.id)" shape="rect" coords="5, 134, 88, 176"/>
+            <area onmouseover="showLayer3(0)" id="1003" onclick="databaseAccess(this.id)" shape="rect" coords="196, 134, 278, 176"/>
+            <area onmouseover="showLayer3(2)" shape="rect" coords="292, 132, 374, 173" id="L3IceCream"/>
+        </map>
+         <!-- layer 3 products under FzFood -->
+        <img class="layer3pdt" id="setBlank" src="Images/category3layer/0_L3_0.png">
+        <img class="layer3pdt" id="FishFinger" src="Images/category3layer/1_L3_FzFd _1.png" usemap="#mapL3_1"/>
+        <map name="mapL3_1">
+            <area id="1000" onclick="databaseAccess(this.id)" shape="rect" coords="61, 76, 143, 117"/>
+            <area id="1001" onclick="databaseAccess(this.id)" shape="rect" coords="155, 76, 237, 117"/>
+        </map>
+        <img class="layer3pdt" id="IceCream" src="Images/category3layer/1_L3_FzFd _2.png" usemap="#mapL3_2"/>
+        <map name="mapL3_2">
+            <area id="1004" onclick="databaseAccess(this.id)" shape="rect" coords="253, 75, 335, 117"/>
+            <area id="1005" onclick="databaseAccess(this.id)" shape="rect" coords="348, 75, 430, 117"/>
+        </map>
+
+
+
+        <img class="productCat" id="HHealth" src="Images/category3layer/2_L2 HH.png" usemap="#map2"/>
+        <map name="map2">
+            <area onmouseover="showLayer3(3)" shape="rect" coords="102, 130, 184, 170" id="L3Panadol"/>
+            <area onmouseover="showLayer3(0)" id="2002" onclick="databaseAccess(this.id)" shape="rect"  coords="6, 134, 89, 176"/>
+            <area onmouseover="showLayer3(4)" shape="rect" coords="293, 130, 375, 170" id="L3GarbageB"/>
+            <area onmouseover="showLayer3(0)" id="2005" onclick="databaseAccess(this.id)" shape="rect"  coords="198, 134, 279, 176"/>
+            <area onmouseover="showLayer3(0)" id="2006" onclick="databaseAccess(this.id)" shape="rect"  coords="399, 134, 470, 176"/>
+        </map>
+        <!-- layer 3 products under HHealth -->
+        <img class="layer3pdt" id="Panadol" src="Images/category3layer/2_L3 HH_1.png" usemap="#mapL3_3"/>
+        <map name="mapL3_3">
+            <area id="2000" onclick="databaseAccess(this.id)" shape="rect" coords="61, 78, 143, 119"/>
+            <area id="2001" onclick="databaseAccess(this.id)" shape="rect" coords="156, 78, 238, 119"/>
+        </map>
+        <img class="layer3pdt" id="GarbageB" src="Images/category3layer/2_L3 HH_2.png" usemap="#mapL3_4"/>
+        <map name="mapL3_4">
+            <area id="2003" onclick="databaseAccess(this.id)" shape="rect" coords="255, 78, 338, 119"/>
+            <area id="2004" onclick="databaseAccess(this.id)" shape="rect" coords="349, 78, 431, 119"/>
+        </map>
+
+        
+        <img class="productCat" id="FshFood" src="Images/category3layer/3_L2_FshFd.png" usemap="#map3"/>
+        <map name="map3">
+            <area onmouseover="showLayer3(5)" shape="rect" coords="74, 130, 135, 171" id="L3Cheese"/>
+            <area onmouseover="showLayer3(0)" id="3002" onclick="databaseAccess(this.id)" shape="rect"  coords="4, 134, 69, 176"/>
+            <area onmouseover="showLayer3(0)" id="3003" onclick="databaseAccess(this.id)" shape="rect"  coords="141, 134, 206, 176"/>
+            <area onmouseover="showLayer3(0)" id="3004" onclick="databaseAccess(this.id)" shape="rect"  coords="213, 134, 278, 176"/>
+            <area onmouseover="showLayer3(0)" id="3005" onclick="databaseAccess(this.id)" shape="rect"  coords="421, 134, 485, 176"/>
+            <area onmouseover="showLayer3(0)" id="3006" onclick="databaseAccess(this.id)" shape="rect"  coords="282, 134, 347, 176"/>
+            <area onmouseover="showLayer3(0)" id="3007" onclick="databaseAccess(this.id)" shape="rect"  coords="352, 134, 416, 176"/>
+        </map>
+        <img class="layer3pdt" id="Cheese" src="Images/category3layer/3_L3_FshFd.png" usemap="#mapL3_5"/>
+        <map name="mapL3_5">
+            <area id="3000" onclick="databaseAccess(this.id)" shape="rect" coords="34, 78, 116, 119"/>
+            <area id="3001" onclick="databaseAccess(this.id)" shape="rect" coords="129, 78, 210, 119"/>
+        </map>
+
+
+
+        <img class="productCat" id="Bvrg" src="Images/category3layer/4_L2_Bvrg.png" usemap="#map4"/>
+        <map name="map4">
+            <area onmouseover="showLayer3(6)" shape="rect" coords="223, 136, 306, 177" id="L3Tbag"/>
+            <area onmouseover="showLayer3(7)" shape="rect" coords="46, 136, 128, 177" id="L3Coffee"/>
+            <area onmouseover="showLayer3(0)" id="4005" onclick="databaseAccess(this.id)" shape="rect"  coords="394, 134, 475, 176"/>
+        </map>
+        <img class="layer3pdt" id="Tbag" src="Images/category3layer/4_L3_Bvrg_Tbag.png" usemap="#mapL3_6"/>
+        <map name="mapL3_6">
+            <area id="4000" onclick="databaseAccess(this.id)" shape="rect" coords="160, 69, 224, 110"/>
+            <area id="4001" onclick="databaseAccess(this.id)" shape="rect" coords="229, 69, 293, 110"/>
+            <area id="4002" onclick="databaseAccess(this.id)" shape="rect" coords="299, 69, 363, 110"/>
+        </map>
+        <img class="layer3pdt" id="coffee" src="Images/category3layer/4_L3_Bvrg_cofee.png" usemap="#mapL3_7"/>
+        <map name="mapL3_7">
+            <area id="4003" onclick="databaseAccess(this.id)" shape="rect" coords="20, 69, 84, 110"/>
+            <area id="4004" onclick="databaseAccess(this.id)" shape="rect" coords="90, 69, 154, 110"/>
+        </map>
+
+
+
+        <img class="productCat" id="PFood" src="Images/category3layer/5_L2 PtFd.png" usemap="#map5"/>
+        <map name="map5">
+            <area onmouseover="showLayer3(8)" shape="rect" coords="293, 130, 375, 171" id="L3DogFd"/>
+            <area onmouseover="showLayer3(0)" id="5002" onclick="databaseAccess(this.id)" shape="rect"  coords="102, 134, 183, 176"/>
+            <area onmouseover="showLayer3(0)" id="5003" onclick="databaseAccess(this.id)" shape="rect"  coords="198, 134, 279, 176"/>
+            <area onmouseover="showLayer3(0)" id="5004" onclick="databaseAccess(this.id)" shape="rect"  coords="389, 134, 470, 176"/>
+        </map>
+        <img class="layer3pdt" id="Dogfd" src="Images/category3layer/5_L3 PtFd.png" usemap="#mapL3_8"/>
+        <map name="mapL3_8">
+            <area id="5000" onclick="databaseAccess(this.id)" shape="rect" coords="349, 77, 431, 118"/>
+            <area id="5001" onclick="databaseAccess(this.id)" shape="rect" coords="255, 77, 337, 118"/>
+        </map>
+       
+
+        <form id="getPdtDtl" name="getPdtDtl" method="get" action="2_getProduct.php" target="frame_RHS_top" style="visibility: hidden;">
+            <input type="text" id="product_id" name="product_id">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container, iframe{
+                position: relative;
+                border: 1px;
+            }
+            body{
+                background-color: darkolivegreen;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1{
+                
+                text-align: center;
+                text-decoration: underline;
+                text-decoration: solid;
+            }
+        </style>
+        <h1>Online Grocery Shop</h1>
+
+    </head>
+    <body>
+        
+        <table id="container">
+            <!-- <tr style="text-align: center;" aria-colspan="2"></tr> -->
+            <tr>
+                <th>
+                    <iframe name="frame_LHS" src="1_productCatagory.html" width="520" height="700">LHS </iframe>                        
+                </th>
+                <th>
+                    <iframe name="frame_RHS_top" src="2_showProduct.php" width="750" height="250">RHS top </iframe>                       
+                    <iframe name="frame_RHS_bottom" src="3_showCart.php" width="750" height="450">RHS bottom </iframe>                    
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
+
